@@ -9,9 +9,6 @@ namespace SampleSOA.PatientOrderService
     {
         public override void Load()
         {
-            //Bind<ISagaRepository<CashierSaga>>()
-            //    .To<InMemorySagaRepository<CashierSaga>>()
-            //    .InSingletonScope();
             Bind<ItemPickedHandler>().ToSelf();
 
             Bind<PatientOrderService>()
@@ -22,8 +19,6 @@ namespace SampleSOA.PatientOrderService
                 {
                     sbc.UseRabbitMqRouting();
                     sbc.ReceiveFrom("rabbitmq://localhost/patient_order_service");
-
-                    //sbc.UseControlBus();
                 }))
                 .InSingletonScope();
         }

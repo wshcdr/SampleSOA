@@ -8,7 +8,7 @@ using Topshelf;
 
 namespace SampleSOA.PatientOrderService
 {
-    internal class Program
+    public class Program
     {
         private static void Main(string[] args)
         {
