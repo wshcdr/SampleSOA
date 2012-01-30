@@ -3,7 +3,7 @@
 namespace SampleSOA.Messages
 {
     [Serializable]
-    public class ItemPicked
+    public class ItemPicked : IAuditableEvent
     {
         public string AtDeviceId { get; set; }
 

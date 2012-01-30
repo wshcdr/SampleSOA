@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleSOA.PatientOrderServi
 		{1DBD3166-A72D-45B1-844A-5735B08D8F91} = {1DBD3166-A72D-45B1-844A-5735B08D8F91}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleSOA.AuditService", "SampleSOA.AuditService\SampleSOA.AuditService.csproj", "{B7418FB5-F0EC-40CA-BFB3-7F7F057CEB8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,16 @@ Global
 		{403C2327-02D6-4CE2-B5D3-D588BA7B743A}.Release|Mixed Platforms.Build.0 = Release|x86
 		{403C2327-02D6-4CE2-B5D3-D588BA7B743A}.Release|x86.ActiveCfg = Release|x86
 		{403C2327-02D6-4CE2-B5D3-D588BA7B743A}.Release|x86.Build.0 = Release|x86
+		{B7418FB5-F0EC-40CA-BFB3-7F7F057CEB8C}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{B7418FB5-F0EC-40CA-BFB3-7F7F057CEB8C}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{B7418FB5-F0EC-40CA-BFB3-7F7F057CEB8C}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{B7418FB5-F0EC-40CA-BFB3-7F7F057CEB8C}.Debug|x86.ActiveCfg = Debug|x86
+		{B7418FB5-F0EC-40CA-BFB3-7F7F057CEB8C}.Debug|x86.Build.0 = Debug|x86
+		{B7418FB5-F0EC-40CA-BFB3-7F7F057CEB8C}.Release|Any CPU.ActiveCfg = Release|x86
+		{B7418FB5-F0EC-40CA-BFB3-7F7F057CEB8C}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{B7418FB5-F0EC-40CA-BFB3-7F7F057CEB8C}.Release|Mixed Platforms.Build.0 = Release|x86
+		{B7418FB5-F0EC-40CA-BFB3-7F7F057CEB8C}.Release|x86.ActiveCfg = Release|x86
+		{B7418FB5-F0EC-40CA-BFB3-7F7F057CEB8C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
