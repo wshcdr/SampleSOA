@@ -36,7 +36,6 @@ namespace SampleSOA.Web
                         sbc.UseRabbitMqRouting();
                         sbc.ReceiveFrom("rabbitmq://localhost/sampleSoaWeb");
                     });
-            Bus.Instance.WriteIntrospectionToFile(@"D:\POC\SampleSOA\logs\mt_web.log");
         }
 
         protected void Application_Start()

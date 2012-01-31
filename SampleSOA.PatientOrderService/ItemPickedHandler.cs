@@ -11,7 +11,8 @@ namespace SampleSOA.PatientOrderService
         public void Consume(ItemPicked message)
         {
             Console.WriteLine(
-                "{0} Picked {1} units of item#{2} at {3} by {4}.",
+                "[{0}] {1} Picked {2} units of item#{3} at {4} by {5}.",
+                message.CorrelationId,
                 message.EventTime,
                 message.Quantity,
                 message.ItemId,
