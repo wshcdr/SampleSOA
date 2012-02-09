@@ -25,8 +25,7 @@ namespace SampleSOA.AuditService
                     c.SetDisplayName("Sample SOA Audit Service");
                     c.SetDescription("A sample SOA service for tracking auditable events.");
 
-                    c.RunAsLocalSystem();
-                    c.DependsOnMsmq();
+                    c.RunAsNetworkService();
 
                     StandardKernel kernel = new StandardKernel();
                     AuditServiceRegistry module = new AuditServiceRegistry();

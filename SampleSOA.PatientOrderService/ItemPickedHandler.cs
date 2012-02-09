@@ -2,18 +2,21 @@
 
 using MassTransit;
 
+using PetaPoco;
+
 using SampleSOA.Messages;
 
 namespace SampleSOA.PatientOrderService
 {
-    public class ItemPickedHandler : BaseRetryHandler<ItemPicked>
-        //: Consumes<ItemPicked>.All
+    public class ItemPickedHandler : TransactionalMessageHandler<ItemPicked>
     {
-        private static readonly Random _random = new Random();
+        private static readonly Random Random = new Random();
 
-        protected override void Handle(ItemPicked message)
+        protected override void Consume(ItemPicked message, 
+            Database database)
         {
-            if (_random.Next(3) > 0)
+            database.Insert("ItemPick", "ItemPickId", message);
+            if (Random.Next(3) > 0)
             {
                 Console.WriteLine(
                     "[{0}] {1} Picked {2} units of item#{3} at {4} by {5}.",

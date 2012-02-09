@@ -21,8 +21,7 @@ namespace SampleSOA.PatientOrderService
                         c.SetDisplayName("Sample SOA Patient Order Service");
                         c.SetDescription("A sample SOA service for handling Patient Orders.");
 
-                        c.RunAsLocalSystem();
-                        c.DependsOnMsmq();
+                        c.RunAsNetworkService();
 
                         StandardKernel kernel = new StandardKernel();
                         PatientOrderServiceRegistry module = new PatientOrderServiceRegistry();

@@ -8,7 +8,8 @@ namespace SampleSOA.PatientOrderService
 
         private readonly ItemPickedHandler _handler;
 
-        public PatientOrderService(IServiceBus bus, ItemPickedHandler handler)
+        public PatientOrderService(IServiceBus bus, 
+            ItemPickedHandler handler)
         {
             _bus = bus;
             _handler = handler;
@@ -16,6 +17,9 @@ namespace SampleSOA.PatientOrderService
 
         public void Start()
         {
+            MigrationRunner migrationRunner = new MigrationRunner();
+            migrationRunner.RunMigrations();
+
             _bus.SubscribeInstance(_handler);
             _bus.WriteIntrospectionToConsole();
         }
