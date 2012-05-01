@@ -1,15 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <log4net>
   <appender name="RollingFile"
-			      type="log4net.Appender.FileAppender">
+			      type="log4net.Appender.RollingFileAppender">
     <file value="..\..\logs\sampleSoaWeb.log" />
-    <appendToFile value="false" />
-
+    <appendToFile value="true" />
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="50" />
+    <maximumFileSize value="10MB" />
+    <staticLogFileName value="true" />
+    <datePattern value="yyyyMMdd" />
     <layout type="log4net.Layout.PatternLayout">
-      <conversionPattern value="%-5p %d{hh:mm:ss} %message%newline" />
+      <conversionPattern value="%level %date [%thread] %logger %message%n" />
     </layout>
   </appender>
-
+  
   <!-- Set root logger level to DEBUG and its only appender to Console -->
   <root>
     <level value="INFO" />
@@ -19,5 +23,6 @@
   <!-- Standard MassTransit Logging Settings -->
   <logger name="MassTransit">
     <level value="INFO" />
+    <appender-ref ref="RollingFile" />
   </logger>
 </log4net>
