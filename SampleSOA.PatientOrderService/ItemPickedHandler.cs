@@ -1,7 +1,5 @@
 ﻿using System;
 
-using MassTransit;
-
 using PetaPoco;
 
 using SampleSOA.Messages;

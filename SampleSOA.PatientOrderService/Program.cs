@@ -10,7 +10,7 @@ namespace SampleSOA.PatientOrderService
 {
     public class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             XmlConfigurator.Configure(new FileInfo("patientOrderService.log4net.xml"));
 

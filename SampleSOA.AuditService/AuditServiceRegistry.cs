@@ -19,8 +19,6 @@ namespace SampleSOA.AuditService
                 {
                     sbc.UseRabbitMqRouting();
                     sbc.ReceiveFrom("rabbitmq://localhost/audit_service");
-
-                    //sbc.UseControlBus();
                 }))
                 .InSingletonScope();
         }
